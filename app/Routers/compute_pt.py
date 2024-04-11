@@ -56,10 +56,12 @@ def calculate_pt_inr(fname: str):
     end_time = t[kp]
 
     # Calculate PT and INR
-    pt = (end_time - begin_time) * 10
+    pt = (end_time - begin_time) * 13.2
+
     pt_normal = 12
     isi = 1.31
     alpha = -0.31
+    print(pt)
     inr = (pt / pt_normal) ** (isi - alpha)
 
     # Determine normal ranges and status
